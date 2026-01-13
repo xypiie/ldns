@@ -185,6 +185,7 @@ ldns_wire2rdf(ldns_rr *rr, const uint8_t *wire, size_t max, size_t *pos)
 	rdf_index = 0;
 	while (*pos < end &&
 			rdf_index < ldns_rr_descriptor_maximum(descriptor)) {
+		getMemory;
 
 		cur_rdf_length = 0;
 
